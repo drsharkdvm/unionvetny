@@ -6,14 +6,35 @@ import path from "node:path";
 // and the Google Maps embed. 'unsafe-inline' is kept for scripts/styles because the
 // pages are statically prerendered (nonce-based CSP would force dynamic rendering);
 // the policy still adds frame-ancestors, object-src and source allowlisting.
+const isDev = process.env.NODE_ENV !== "production";
+
+// React's dev server (Fast Refresh, the error overlay, source-mapped callstacks)
+// relies on eval(), and HMR opens a WebSocket back to the dev origin. Both are
+// permitted in development ONLY — the production policy never allows 'unsafe-eval'.
+const scriptSrc = [
+  "script-src 'self' 'unsafe-inline'",
+  isDev && "'unsafe-eval'",
+  "https://www.googletagmanager.com https://www.google-analytics.com",
+]
+  .filter(Boolean)
+  .join(" ");
+
+const connectSrc = [
+  "connect-src 'self'",
+  isDev && "ws: wss:",
+  "https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net",
+]
+  .filter(Boolean)
+  .join(" ");
+
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+  scriptSrc,
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: https:",
   "frame-src 'self' https://www.localmarketingmanager.com https://www.google.com https://maps.google.com",
-  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net",
+  connectSrc,
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'self'",

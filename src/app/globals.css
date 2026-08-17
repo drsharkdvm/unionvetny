@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   UNION VET — Brand design tokens
+   Palette (from Union Vet Brand Guidelines):
+   Union Navy #1F2F42 · Guardian Red #E62B47 · Response Blue #0588C9
+   Sky Tint #E4F3FB · Neutral Gray #6B7280 · White #FFFFFF
+   ============================================================ */
+@theme {
+  /* Extra-small breakpoint for dense utility bars */
+  --breakpoint-xs: 26rem;
+
+  /* Brand — Navy scale */
+  --color-navy-950: #0f1922;
+  --color-navy-900: #16222f;
+  --color-navy-800: #1a2735;
+  --color-navy: #1f2f42;
+  --color-navy-700: #294056;
+  --color-navy-600: #37536e;
+  --color-navy-500: #4a6683;
+
+  /* Brand — Guardian Red scale */
+  --color-red-50: #fdeef1;
+  --color-red-100: #fbd8de;
+  --color-red: #e62b47;
+  --color-red-600: #cf1f3a;
+  --color-red-700: #ac1830;
+
+  /* Brand — Response Blue scale */
+  --color-blue-50: #e4f3fb;
+  --color-blue-100: #c5e6f7;
+  --color-blue: #0588c9;
+  --color-blue-600: #0471a6;
+  --color-blue-700: #045c86;
+
+  /* Brand — Supporting */
+  --color-sky: #e4f3fb;
+  --color-sky-200: #cfe9f7;
+  --color-ink: #1f2f42;
+  --color-slate: #4c5a6a;
+  --color-mutegray: #6b7280;
+  --color-hairline: #e2e8ef;
+
+  /* Type families (wired to next/font in layout.tsx) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), var(--font-inter), sans-serif;
+
+  /* Layered, color-tinted shadows (low opacity per brand) */
+  --shadow-card: 0 1px 2px rgba(31, 47, 66, 0.04), 0 8px 24px -12px rgba(31, 47, 66, 0.18);
+  --shadow-float: 0 2px 4px rgba(31, 47, 66, 0.05), 0 24px 48px -20px rgba(31, 47, 66, 0.28);
+  --shadow-red: 0 8px 22px -10px rgba(230, 43, 71, 0.55);
+  --shadow-blue: 0 8px 22px -10px rgba(5, 136, 201, 0.5);
+
+  /* Easing */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* shadcn semantic tokens — mapped to the Union Vet palette */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-display);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+}
+
+:root {
+  --radius: 0.6rem; /* crisp, not over-rounded */
+  --background: #ffffff;
+  --foreground: #1f2f42;
+  --card: #ffffff;
+  --card-foreground: #1f2f42;
+  --popover: #ffffff;
+  --popover-foreground: #1f2f42;
+  --primary: #1f2f42; /* Union Navy */
+  --primary-foreground: #ffffff;
+  --secondary: #e4f3fb; /* Sky Tint */
+  --secondary-foreground: #1f2f42;
+  --muted: #f1f5f9;
+  --muted-foreground: #6b7280; /* Neutral Gray */
+  --accent: #e4f3fb;
+  --accent-foreground: #0471a6;
+  --destructive: #e62b47; /* Guardian Red */
+  --border: #e2e8ef;
+  --input: #e2e8ef;
+  --ring: #0588c9; /* Response Blue focus */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+  ::selection {
+    background: #e62b47;
+    color: #fff;
+  }
+  /* Consistent, visible focus for every interactive element */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ============================================================
+   Brand utilities
+   ============================================================ */
+@layer components {
+  /* Eyebrow / label — small bold red uppercase with tracking */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.18em] text-red;
+  }
+
+  /* Section horizontal rhythm */
+  .container-x {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8;
+  }
+
+  /* Animated navy underline for nav links */
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background: var(--color-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-spring);
+  }
+  .nav-underline:hover::after,
+  .nav-underline[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Subtle grain/noise overlay for depth on dark surfaces */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Photo treatment: gradient overlay + subtle brand tone */
+.photo-treat {
+  position: relative;
+  overflow: hidden;
+}
+.photo-treat::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 25, 34, 0.55), rgba(15, 25, 34, 0) 55%);
+  pointer-events: none;
+}
+
+/* Staggered entrance — transform + opacity only */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.reveal {
+  opacity: 0;
+  animation: fade-up 0.7s var(--ease-spring) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none; opacity: 1; }
+  html { scroll-behavior: auto; }
+}

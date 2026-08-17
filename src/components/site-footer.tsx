@@ -73,6 +73,11 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
+                <Link href="/emergency-vet" className="inline-flex items-center gap-2 font-semibold text-white/90 transition-colors hover:text-blue-100">
+                  <Icon name="Siren" className="size-4 text-red" /> Emergency Care
+                </Link>
+              </li>
+              <li>
                 <a href={ACTIONS.book.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/70 transition-colors hover:text-blue-100">
                   <Icon name="CalendarCheck" className="size-4 text-red" /> Book an Appointment
                 </a>

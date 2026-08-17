@@ -333,8 +333,8 @@ export default function HomePage() {
               <Cta href={SITE.phone.href} variant="primary" size="lg" icon="PhoneCall" iconPosition="start">
                 Emergency? Call Now
               </Cta>
-              <Cta href="/our-services/urgent-emergency-care" variant="outlineWhite" size="lg" icon="ArrowRight">
-                Urgent care details
+              <Cta href="/emergency-vet" variant="outlineWhite" size="lg" icon="ArrowRight">
+                Emergency care info
               </Cta>
             </div>
           </div>

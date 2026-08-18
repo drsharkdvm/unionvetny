@@ -57,27 +57,27 @@ export default function HomePage() {
         <div className="container-x relative grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           {/* Copy */}
           <div className="max-w-xl">
-            <Reveal>
+            <Reveal immediate>
               <span className="eyebrow text-red-100">
                 <Icon name="MapPin" className="size-4" strokeWidth={2.5} />
                 Oakland Gardens · Queens, NY
               </span>
             </Reveal>
-            <Reveal delay={80}>
+            <Reveal immediate delay={80}>
               <h1 className="mt-5 font-display text-[clamp(2.6rem,6vw,4.25rem)] leading-[0.98] tracking-[-0.03em]">
                 Your Pet&apos;s Care
                 <br />
                 Team, <span className="text-red">United.</span>
               </h1>
             </Reveal>
-            <Reveal delay={160}>
+            <Reveal immediate delay={160}>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/80">
                 Union Vet is your trusted animal hospital in Queens — fast same-day
                 emergency care plus wellness exams, vaccinations, surgery and advanced
                 diagnostics for the pets you love.
               </p>
             </Reveal>
-            <Reveal delay={240}>
+            <Reveal immediate delay={240}>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Cta href={ACTIONS.book.href} external variant="primary" size="lg" icon="CalendarCheck" iconPosition="start">
                   Book an Appointment
@@ -87,7 +87,7 @@ export default function HomePage() {
                 </Cta>
               </div>
             </Reveal>
-            <Reveal delay={320}>
+            <Reveal immediate delay={320}>
               <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3">
                 {HERO_TRUST.map((t) => (
                   <li key={t.label} className="inline-flex items-center gap-2 text-sm font-semibold text-white/85">
@@ -102,7 +102,7 @@ export default function HomePage() {
           </div>
 
           {/* Visual */}
-          <Reveal delay={200} className="relative">
+          <Reveal immediate delay={200} className="relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* speed-stripe wings behind the frame */}
               <div aria-hidden className="absolute -inset-4 -z-0">

@@ -12,16 +12,24 @@ export function Reveal({
   className,
   delay = 0,
   as: Tag = "div",
+  immediate = false,
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
   as?: React.ElementType;
+  /**
+   * Render visible from the first paint (SSR) instead of fading in on scroll.
+   * Use for above-the-fold content (e.g. the hero) so it isn't hidden behind
+   * client-side JS — hiding the LCP element until hydration wrecks LCP.
+   */
+  immediate?: boolean;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [shown, setShown] = useState(false);
+  const [shown, setShown] = useState(immediate);
 
   useEffect(() => {
+    if (immediate) return;
     const node = ref.current;
     if (!node) return;
     if (

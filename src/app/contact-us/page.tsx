@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description:
     "Contact Union Vet in Oakland Gardens, Queens — call (718) 301-4030, email info@unionvetny.com, or send a message. Open Mon–Fri 8–8, Sat 8–4.",
   alternates: { canonical: "/contact-us" },
+  openGraph: { title: "Contact Us · Union Vet", url: "/contact-us" },
+  twitter: { title: "Contact Us · Union Vet" },
 };
 
 const CONTACT_CARDS: { icon: IconName; label: string; value: string; href: string; external?: boolean }[] = [
@@ -33,7 +35,7 @@ export default function ContactPage() {
         <div className="container-x grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
           {/* Details */}
           <div>
-            <span className="eyebrow text-red">
+            <span className="eyebrow">
               <Icon name="PhoneCall" className="size-4" strokeWidth={2.5} />
               Get in touch
             </span>
@@ -78,7 +80,7 @@ export default function ContactPage() {
                 {SITE.hours.map((h) => (
                   <li key={h.day} className="flex items-center justify-between py-2.5 text-sm">
                     <span className="font-medium text-navy">{h.day}</span>
-                    <span className={h.closed ? "font-semibold text-red" : "tabular-nums text-slate"}>
+                    <span className={h.closed ? "font-semibold text-red-600" : "tabular-nums text-slate"}>
                       {h.hours}
                     </span>
                   </li>
@@ -98,7 +100,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div>
-            <span className="eyebrow text-red">
+            <span className="eyebrow">
               <Icon name="Mail" className="size-4" strokeWidth={2.5} />
               Send a message
             </span>

@@ -183,7 +183,7 @@ export const PRIVACY = {
     "x": "Collecting and Using Your Personal Data"
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "How Data Is Collected"
   },
   {
@@ -215,7 +215,7 @@ export const PRIVACY = {
     "x": "All information collected is used solely for the purposes stated in this Privacy Policy and is never shared with third parties for marketing purposes."
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "What Personal Data Is Collected"
   },
   {
@@ -243,7 +243,7 @@ export const PRIVACY = {
     "x": "Usage Data"
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "Usage Data"
   },
   {
@@ -263,7 +263,7 @@ export const PRIVACY = {
     "x": "We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device."
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "Tracking Technologies and Cookies"
   },
   {
@@ -491,7 +491,7 @@ export const PRIVACY = {
     "x": "Disclosure of Your Personal Data"
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "Business Transactions"
   },
   {
@@ -499,7 +499,7 @@ export const PRIVACY = {
     "x": "If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy."
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "Law enforcement"
   },
   {
@@ -507,7 +507,7 @@ export const PRIVACY = {
     "x": "Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency)."
   },
   {
-    "t": "h4",
+    "t": "h3",
     "x": "Other legal requirements"
   },
   {

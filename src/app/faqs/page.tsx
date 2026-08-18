@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description:
     "Common questions about Union Vet in Oakland Gardens, Queens — hours, emergency care, booking, new patients, prescriptions and more.",
   alternates: { canonical: "/faqs" },
+  openGraph: { title: "Frequently Asked Questions · Union Vet", url: "/faqs" },
+  twitter: { title: "Frequently Asked Questions · Union Vet" },
 };
 
 const faqJsonLd = {
@@ -47,6 +49,7 @@ export default function FaqPage() {
       <section className="bg-white py-20 md:py-24">
         <div className="container-x grid gap-12 lg:grid-cols-[1.4fr_0.6fr] lg:gap-16">
           {/* Accordion */}
+          <h2 className="sr-only">Common questions about Union Vet</h2>
           <Accordion multiple className="flex flex-col gap-4">
             {FAQS.map((faq, i) => (
               <AccordionItem

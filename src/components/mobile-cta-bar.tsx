@@ -16,7 +16,7 @@ export function MobileCtaBar() {
         href={ACTIONS.book.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-red font-bold text-white shadow-[var(--shadow-red)] active:translate-y-px"
+        className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-red-600 font-bold text-white shadow-[var(--shadow-red)] active:translate-y-px"
       >
         <Icon name="CalendarCheck" className="size-5" />
         Book

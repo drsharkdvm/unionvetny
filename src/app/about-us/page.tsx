@@ -10,9 +10,14 @@ import { CtaBand } from "@/components/cta-band";
 import { VALUES, WHY_CHOOSE_US, TEAM } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
+/** Stable @id for each vet so other pages (e.g. blog authorship) can reference them. */
+const personId = (name: string) =>
+  `${SITE.url}/about-us#${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+
 const teamJsonLd = TEAM.map((m) => ({
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": personId(m.name),
   name: m.name,
   jobTitle: m.role,
   description: m.bio,
@@ -31,6 +36,8 @@ export const metadata: Metadata = {
   description:
     "Meet the Union Vet team — a modern animal hospital in Oakland Gardens, Queens, pioneering accessible urgent care, led by Dr. Cabugawan & Dr. Sharkawy.",
   alternates: { canonical: "/about-us" },
+  openGraph: { title: "About Us · Union Vet", url: "/about-us" },
+  twitter: { title: "About Us · Union Vet" },
 };
 
 export default function AboutPage() {

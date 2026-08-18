@@ -27,12 +27,12 @@ export function TeamCard({ member, className }: { member: TeamMember; className?
         />
       </div>
 
-      <span className="mt-5 inline-flex items-center gap-1.5 rounded-md bg-red px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)]">
+      <span className="mt-5 inline-flex items-center gap-1.5 rounded-md bg-red-600 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)]">
         <Icon name="Stethoscope" className="size-3.5" />
         {member.role}
       </span>
       <h3 className="mt-3 font-display text-xl tracking-tight text-navy">{member.name}</h3>
-      {member.tagline && <p className="mt-2 text-sm font-bold text-blue">{member.tagline}</p>}
+      {member.tagline && <p className="mt-2 text-sm font-bold text-blue-600">{member.tagline}</p>}
       <p className="mt-3 text-[0.95rem] leading-relaxed text-slate">{member.bio}</p>
     </figure>
   );

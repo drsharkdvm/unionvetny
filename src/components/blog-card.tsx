@@ -49,7 +49,7 @@ export function BlogCard({
         </div>
         <h3
           className={cn(
-            "mt-3 font-bold leading-snug tracking-tight text-navy transition-colors group-hover:text-blue",
+            "mt-3 font-bold leading-snug tracking-tight text-navy transition-colors group-hover:text-blue-600",
             featured ? "text-xl" : "text-lg"
           )}
         >
@@ -58,7 +58,7 @@ export function BlogCard({
         <p className="mt-2.5 line-clamp-3 flex-1 text-[0.95rem] leading-relaxed text-slate">
           {post.excerpt}
         </p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue-600">
           Read article
           <Icon
             name="ArrowRight"

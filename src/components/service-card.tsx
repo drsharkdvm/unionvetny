@@ -37,7 +37,7 @@ export function ServiceCard({
       <h3 className="text-lg font-bold tracking-tight text-navy">{service.title}</h3>
       <p className="mt-2.5 text-[0.95rem] leading-relaxed text-slate">{service.summary}</p>
       {href && (
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue-600">
           Learn more
           <Icon
             name="ArrowRight"

@@ -114,7 +114,7 @@ export default function EmergencyVetPage() {
 
           <div className="max-w-2xl">
             <Reveal>
-              <span className="eyebrow text-red">
+              <span className="eyebrow text-red-100">
                 <Icon name="Siren" className="size-4" strokeWidth={2.5} />
                 Same-Day Emergency Care · Oakland Gardens, Queens
               </span>
@@ -221,17 +221,20 @@ export default function EmergencyVetPage() {
           />
           <ol className="mt-12 grid gap-5 md:grid-cols-3 lg:grid-cols-5">
             {STEPS.map((step, i) => (
-              <Reveal key={step.title} delay={(i % 5) * 70}>
-                <li className="relative h-full rounded-xl border border-white bg-white p-6 shadow-[var(--shadow-card)]">
-                  <span className="absolute right-5 top-5 font-display text-3xl leading-none text-sky-200">
-                    {i + 1}
-                  </span>
-                  <span className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-navy text-white">
-                    <Icon name={step.icon} className="size-6" strokeWidth={2.25} />
-                  </span>
-                  <h3 className="text-base font-bold text-navy">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate">{step.body}</p>
-                </li>
+              <Reveal
+                as="li"
+                key={step.title}
+                delay={(i % 5) * 70}
+                className="relative h-full rounded-xl border border-white bg-white p-6 shadow-[var(--shadow-card)]"
+              >
+                <span className="absolute right-5 top-5 font-display text-3xl leading-none text-sky-200">
+                  {i + 1}
+                </span>
+                <span className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-navy text-white">
+                  <Icon name={step.icon} className="size-6" strokeWidth={2.25} />
+                </span>
+                <h3 className="text-base font-bold text-navy">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{step.body}</p>
               </Reveal>
             ))}
           </ol>
@@ -320,7 +323,7 @@ export default function EmergencyVetPage() {
                 {SITE.hours.map((h) => (
                   <li key={h.day} className="flex items-center justify-between py-2.5 text-sm">
                     <span className="font-medium text-navy">{h.day}</span>
-                    <span className={h.closed ? "font-semibold text-red" : "tabular-nums text-slate"}>{h.hours}</span>
+                    <span className={h.closed ? "font-semibold text-red-600" : "tabular-nums text-slate"}>{h.hours}</span>
                   </li>
                 ))}
               </ul>
@@ -333,7 +336,7 @@ export default function EmergencyVetPage() {
                 <strong className="font-semibold text-navy">After hours?</strong> Union Vet offers same-day
                 urgent and emergency care during our open hours — we&apos;re a full-service hospital, not a
                 24-hour facility. For an emergency outside these hours, call{" "}
-                <a href={SITE.phone.href} className="font-semibold text-blue underline underline-offset-2">{SITE.phone.display}</a>{" "}
+                <a href={SITE.phone.href} className="font-semibold text-blue-600 underline underline-offset-2">{SITE.phone.display}</a>{" "}
                 for guidance or go to the nearest 24-hour emergency animal hospital.
               </span>
             </p>
@@ -375,7 +378,7 @@ export default function EmergencyVetPage() {
           className="absolute -right-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-red/25 blur-3xl"
         />
         <div className="container-x relative flex flex-col items-center gap-8 py-16 text-center md:py-20">
-          <span className="eyebrow text-red">
+          <span className="eyebrow text-red-100">
             <Icon name="Siren" className="size-4" strokeWidth={2.5} />
             Every Second Counts
           </span>

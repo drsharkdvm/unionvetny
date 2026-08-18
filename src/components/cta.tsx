@@ -14,9 +14,9 @@ export const ctaVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-red text-white shadow-[var(--shadow-red)] hover:bg-red-600 hover:-translate-y-0.5",
+          "bg-red-600 text-white shadow-[var(--shadow-red)] hover:bg-red-700 hover:-translate-y-0.5",
         secondary:
-          "bg-blue text-white shadow-[var(--shadow-blue)] hover:bg-blue-600 hover:-translate-y-0.5",
+          "bg-blue-600 text-white shadow-[var(--shadow-blue)] hover:bg-blue-700 hover:-translate-y-0.5",
         outline:
           "border-2 border-navy/25 text-navy bg-white hover:border-navy hover:bg-navy hover:text-white",
         outlineWhite:

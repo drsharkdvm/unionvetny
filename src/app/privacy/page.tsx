@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "How Union Vet collects, uses, protects and discloses your personal information, including our SMS messaging program and your privacy rights.",
   alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy · Union Vet", url: "/privacy" },
+  twitter: { title: "Privacy Policy · Union Vet" },
 };
 
 export default function PrivacyPage() {

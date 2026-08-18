@@ -137,7 +137,7 @@ export function ContactForm() {
 
 function FieldError({ children }: { children: React.ReactNode }) {
   return (
-    <p className="flex items-center gap-1.5 text-xs font-medium text-red">
+    <p className="flex items-center gap-1.5 text-xs font-medium text-red-600">
       <Icon name="X" className="size-3.5" strokeWidth={3} />
       {children}
     </p>

@@ -21,6 +21,10 @@ const archivo = Archivo_Black({
   weight: "400",
   variable: "--font-archivo",
   display: "swap",
+  // Display font (headings only) — don't preload it so the ~48KB woff2 doesn't
+  // compete with the LCP hero image on slow mobile. swap + adjusted fallback
+  // keeps CLS at ~0 while the web font streams in.
+  preload: false,
 });
 
 export const metadata: Metadata = {

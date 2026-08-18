@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description:
     "The Union Vet pet health library — practical, vet-written guides on dog and cat health, nutrition, safety and preventive care for Queens pet owners.",
   alternates: { canonical: "/blog" },
+  openGraph: { title: "Blog · Union Vet", url: "/blog" },
+  twitter: { title: "Blog · Union Vet" },
 };
 
 export default function BlogPage() {
@@ -27,6 +29,7 @@ export default function BlogPage() {
 
       <section className="bg-white py-20 md:py-24">
         <div className="container-x">
+          <h2 className="sr-only">Latest articles</h2>
           {/* Featured */}
           <Reveal>
             <div className="grid gap-6 sm:grid-cols-2">

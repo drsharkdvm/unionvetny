@@ -58,12 +58,6 @@ export const SITE = {
     { label: "Saturday", value: "8 AM – 4 PM" },
     { label: "Sunday", value: "Closed" },
   ],
-
-  social: {
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
-    google: "https://www.google.com/maps/search/?api=1&query=Union+Vet+NY+Oakland+Gardens",
-  },
 } as const;
 
 /** External destinations (open in a new tab). */

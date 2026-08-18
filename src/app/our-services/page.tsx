@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description:
     "Urgent care, wellness exams, vaccinations, diagnostics, surgery and dental care at Union Vet — comprehensive veterinary services in Oakland Gardens, Queens.",
   alternates: { canonical: "/our-services" },
+  openGraph: { title: "Our Services · Union Vet", url: "/our-services" },
+  twitter: { title: "Our Services · Union Vet" },
 };
 
 const SURGERY_POINTS = [
@@ -112,7 +114,7 @@ export default function ServicesPage() {
         />
         <div className="container-x relative grid gap-10 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="eyebrow text-red">
+            <span className="eyebrow">
               <Icon name="Siren" className="size-4" strokeWidth={2.5} />
               Urgent & Emergency Care
             </span>
@@ -174,7 +176,7 @@ export default function ServicesPage() {
           <div className="mt-16 overflow-hidden rounded-2xl border border-hairline bg-sky shadow-[var(--shadow-card)]">
             <div className="grid gap-8 p-8 md:grid-cols-[1.4fr_1fr] md:items-center md:p-12">
               <div>
-                <span className="eyebrow text-red">
+                <span className="eyebrow">
                   <Icon name="Apple" className="size-4" strokeWidth={2.5} />
                   Nutritional Counseling
                 </span>

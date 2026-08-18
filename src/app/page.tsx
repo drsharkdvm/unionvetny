@@ -58,7 +58,7 @@ export default function HomePage() {
           {/* Copy */}
           <div className="max-w-xl">
             <Reveal>
-              <span className="eyebrow text-red">
+              <span className="eyebrow text-red-100">
                 <Icon name="MapPin" className="size-4" strokeWidth={2.5} />
                 Oakland Gardens · Queens, NY
               </span>
@@ -317,7 +317,7 @@ export default function HomePage() {
         />
         <div className="container-x relative grid gap-10 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="eyebrow text-red">
+            <span className="eyebrow text-red-100">
               <Icon name="Siren" className="size-4" strokeWidth={2.5} />
               Emergency & Urgent Care
             </span>
@@ -368,7 +368,7 @@ export default function HomePage() {
             />
             <div className="flex items-center gap-2 text-sm font-semibold text-navy">
               <Stars rating={5} />
-              Rated 5.0 from {TESTIMONIALS.length}+ Google reviews
+              Loved by pet parents across Queens
             </div>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -395,7 +395,7 @@ export default function HomePage() {
             />
             <div className="flex items-center gap-2 text-sm font-semibold text-navy">
               <Stars rating={5} />
-              Rated 5.0 across Google reviews
+              Real reviews, straight from our Google profile
             </div>
           </div>
 

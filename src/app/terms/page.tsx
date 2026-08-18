@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description:
     "Terms and Conditions for Union Vet, including our SMS messaging program opt-in, opt-out, message frequency and support details.",
   alternates: { canonical: "/terms" },
+  openGraph: { title: "Terms and Conditions · Union Vet", url: "/terms" },
+  twitter: { title: "Terms and Conditions · Union Vet" },
 };
 
 export default function TermsPage() {

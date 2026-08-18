@@ -9,6 +9,7 @@ import { Cta } from "@/components/cta";
 import { CtaBand } from "@/components/cta-band";
 import { TeethDivider } from "@/components/teeth-divider";
 import { SITE, ACTIONS } from "@/lib/site";
+import { TEAM } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -68,12 +69,14 @@ export default async function ArticlePage({ params }: Params) {
       datePublished: post.date,
       dateModified: post.date,
       articleSection: post.category,
-      author: { "@type": "Organization", name: SITE.legalName, url: SITE.url },
-      reviewedBy: {
-        "@type": "Organization",
-        name: SITE.name,
+      // Attribute authorship to the named veterinarians (linked by @id to their
+      // Person entities on /about-us) for stronger E-E-A-T on medical content.
+      author: TEAM.map((m) => ({
+        "@type": "Person",
+        "@id": `${SITE.url}/about-us#${m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
+        name: m.name,
         url: `${SITE.url}/about-us`,
-      },
+      })),
       publisher: {
         "@type": "Organization",
         name: SITE.legalName,
@@ -120,7 +123,7 @@ export default async function ArticlePage({ params }: Params) {
               <li className="text-white/90">{post.category}</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 rounded-md bg-red px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-white">
+          <span className="inline-flex items-center gap-2 rounded-md bg-red-600 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-white">
             {post.category}
           </span>
           <h1 className="mt-4 font-display text-[clamp(1.9rem,4.2vw,3rem)] leading-[1.08] tracking-[-0.02em]">
@@ -184,7 +187,7 @@ export default async function ArticlePage({ params }: Params) {
             <div className="flex-1">
               <p className="font-bold text-navy">
                 Medically reviewed by the{" "}
-                <Link href="/about-us" className="text-blue underline underline-offset-2 hover:text-blue-600">
+                <Link href="/about-us" className="text-blue-600 underline underline-offset-2 hover:text-blue-700">
                   Union Vet veterinary team
                 </Link>
               </p>
@@ -201,7 +204,7 @@ export default async function ArticlePage({ params }: Params) {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-hairline pt-8">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-blue hover:text-blue-600">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700">
               <Icon name="ArrowRight" className="size-4 rotate-180" /> Back to all articles
             </Link>
             <Cta href={ACTIONS.book.href} external variant="outline" size="sm" icon="CalendarCheck" iconPosition="start">

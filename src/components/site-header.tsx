@@ -52,7 +52,7 @@ export function SiteHeader() {
               data-active={isActive(item.href)}
               className={cn(
                 "nav-underline text-[13px] font-bold uppercase tracking-[0.09em] transition-colors",
-                isActive(item.href) ? "text-blue" : "text-navy hover:text-blue"
+                isActive(item.href) ? "text-blue-600" : "text-navy hover:text-blue-600"
               )}
             >
               {item.label}
@@ -98,7 +98,7 @@ export function SiteHeader() {
           "fixed inset-0 z-50 lg:hidden",
           open ? "pointer-events-auto" : "pointer-events-none"
         )}
-        aria-hidden={!open}
+        inert={!open}
       >
         <div
           className={cn(
@@ -135,7 +135,7 @@ export function SiteHeader() {
                 className={cn(
                   "flex items-center justify-between rounded-lg px-3 py-3 text-base font-bold uppercase tracking-[0.06em] transition-colors",
                   isActive(item.href)
-                    ? "bg-sky text-blue"
+                    ? "bg-sky text-blue-600"
                     : "text-navy hover:bg-sky"
                 )}
               >

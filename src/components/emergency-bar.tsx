@@ -10,7 +10,7 @@ export function EmergencyBar() {
           href={SITE.phone.href}
           className="group inline-flex items-center gap-2 font-semibold"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-red px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.14em]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-red-600 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.14em]">
             <Icon name="Siren" className="size-3.5" strokeWidth={2.5} />
             <span className="hidden xs:inline">Same-Day Emergency</span>
             <span className="xs:hidden">Emergency</span>

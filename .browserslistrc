@@ -1,0 +1,9 @@
+# Modern baseline for the client bundle. Trims legacy/nomodule polyfills and
+# down-levelling that Lighthouse flags as "legacy JavaScript", while still
+# covering ~4 years of browsers (matches the AVIF/WebP the image pipeline uses).
+Chrome >= 110
+Edge >= 110
+Firefox >= 110
+Safari >= 16
+iOS >= 16
+not dead

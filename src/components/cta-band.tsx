@@ -28,7 +28,7 @@ export function CtaBand({
       />
 
       <div className="container-x relative flex flex-col items-center gap-8 py-16 text-center md:py-20">
-        <span className="eyebrow text-red">
+        <span className="eyebrow text-red-100">
           <Icon name="PawPrint" className="size-4" strokeWidth={2.5} />
           {eyebrow}
         </span>

@@ -11,7 +11,7 @@ function linkify(text: string): React.ReactNode {
   let last = 0;
   let m: RegExpExecArray | null;
   let key = 0;
-  const cls = "font-medium text-blue underline underline-offset-2 hover:text-blue-600";
+  const cls = "font-medium text-blue-600 underline underline-offset-2 hover:text-blue-700";
   while ((m = regex.exec(text)) !== null) {
     if (m.index > last) nodes.push(text.slice(last, m.index));
     const tok = m[0];

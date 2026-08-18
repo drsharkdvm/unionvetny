@@ -430,7 +430,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       },
       {
         "t": "h2",
@@ -606,7 +606,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "If your dog has sores on dogs belly and you're not sure whether to watch, text, or head straight to emergency care, Union Vet NY can help you think it through. Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "If your dog has sores on dogs belly and you're not sure whether to watch, text, or head straight to emergency care, Union Vet NY can help you think it through. Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       }
     ]
   },
@@ -1178,7 +1178,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       },
       {
         "t": "h2",
@@ -1226,7 +1226,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "If your dog has a concerning temperature, acting quickly matters. Union Vet NY serves Oakland Gardens, Bayside, Fresh Meadows, Glen Oaks, Little Neck, Hollis, and Queens Village with compassionate veterinary care for sick pets, urgent concerns, and ongoing wellness needs. Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "If your dog has a concerning temperature, acting quickly matters. Union Vet NY serves Oakland Gardens, Bayside, Fresh Meadows, Glen Oaks, Little Neck, Hollis, and Queens Village with compassionate veterinary care for sick pets, urgent concerns, and ongoing wellness needs. Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       }
     ]
   },
@@ -1698,7 +1698,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "If your dog has a rash and you're not sure what level of care they need, contact Union Vet NY. Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "If your dog has a rash and you're not sure what level of care they need, contact Union Vet NY. Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       }
     ]
   },
@@ -2314,7 +2314,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       },
       {
         "t": "h2",
@@ -2398,7 +2398,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "If your dog has liver disease and you're trying to figure out the next meal, the safest path is a plan specific to your dog's diagnosis, appetite, and lab work. Union Vet NY helps Queens pet owners make those day-to-day decisions with clear medical guidance, prescription nutrition, and follow-up care. Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "If your dog has liver disease and you're trying to figure out the next meal, the safest path is a plan specific to your dog's diagnosis, appetite, and lab work. Union Vet NY helps Queens pet owners make those day-to-day decisions with clear medical guidance, prescription nutrition, and follow-up care. Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       }
     ]
   },
@@ -2886,7 +2886,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       },
       {
         "t": "h2",
@@ -2942,7 +2942,7 @@ export const POSTS: Post[] = [
       },
       {
         "t": "p",
-        "x": "If your kitten's stool has changed and you're not sure what it means, Union Vet NY can help you sort out what's normal, what's urgent, and what needs immediate care. Text us at 718-301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
+        "x": "If your kitten's stool has changed and you're not sure what it means, Union Vet NY can help you sort out what's normal, what's urgent, and what needs immediate care. Text us at (718) 301-4030. If symptoms are severe or after hours, go directly to a 24/7 emergency hospital."
       }
     ]
   }

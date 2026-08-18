@@ -149,7 +149,7 @@
 @layer components {
   /* Eyebrow / label — small bold red uppercase with tracking */
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.18em] text-red;
+    @apply inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.18em] text-red-600;
   }
 
   /* Section horizontal rhythm */

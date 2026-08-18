@@ -1,10 +1,11 @@
 import { SITE, WIDGETS } from "@/lib/site";
-import { TESTIMONIALS } from "@/lib/content";
 
 /**
  * LocalBusiness / VeterinaryCare structured data — emitted site-wide so search
- * engines and AI answer engines can surface NAP, hours, geo, map, reviews and
- * ratings reliably.
+ * engines and AI answer engines can surface NAP, hours, geo and map reliably.
+ * (No aggregateRating/review here: self-declared ratings without verifiable,
+ * on-page reviews violate Google's review-snippet policy — the real rating and
+ * count come from the live Google Business Profile.)
  */
 export function StructuredData() {
   const data = {
@@ -67,22 +68,6 @@ export function StructuredData() {
         closes: "16:00",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      reviewCount: TESTIMONIALS.length,
-    },
-    review: TESTIMONIALS.map((t) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: t.name },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: String(t.rating),
-        bestRating: "5",
-      },
-      reviewBody: t.quote,
-    })),
   };
 
   return (

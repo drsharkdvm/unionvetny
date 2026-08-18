@@ -30,7 +30,7 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <span className={cn("eyebrow mb-4", tone === "white" && "text-red")}>
+        <span className={cn("eyebrow mb-4", tone === "white" && "text-red-100")}>
           <Icon name={eyebrowIcon} className="size-4" strokeWidth={2.5} />
           {eyebrow}
         </span>

@@ -19,6 +19,18 @@ export interface DayHours {
 const PHONE_DISPLAY = "(718) 301-4030";
 const PHONE_E164 = "+17183014030";
 
+// Typed as DayHours[] so `closed` stays an available (optional) field even when
+// no day is currently closed — set `closed: true` on a day to grey it out.
+const HOURS: DayHours[] = [
+  { day: "Monday", hours: "9 AM – 8 PM" },
+  { day: "Tuesday", hours: "9 AM – 8 PM" },
+  { day: "Wednesday", hours: "9 AM – 8 PM" },
+  { day: "Thursday", hours: "9 AM – 8 PM" },
+  { day: "Friday", hours: "9 AM – 8 PM" },
+  { day: "Saturday", hours: "10 AM – 6 PM" },
+  { day: "Sunday", hours: "10 AM – 6 PM" },
+];
+
 export const SITE = {
   name: "Union Vet",
   // Official / Google Business Profile name. "Union Vet NY" is kept only as an
@@ -43,20 +55,11 @@ export const SITE = {
       "https://www.google.com/maps?q=222-10+Union+Tpke,+Oakland+Gardens,+NY+11364&output=embed",
   },
 
-  hours: [
-    { day: "Sunday", hours: "Closed", closed: true },
-    { day: "Monday", hours: "8 AM – 8 PM" },
-    { day: "Tuesday", hours: "8 AM – 8 PM" },
-    { day: "Wednesday", hours: "8 AM – 8 PM" },
-    { day: "Thursday", hours: "8 AM – 8 PM" },
-    { day: "Friday", hours: "8 AM – 8 PM" },
-    { day: "Saturday", hours: "8 AM – 4 PM" },
-  ] satisfies DayHours[],
+  hours: HOURS,
 
   hoursSummary: [
-    { label: "Mon – Fri", value: "8 AM – 8 PM" },
-    { label: "Saturday", value: "8 AM – 4 PM" },
-    { label: "Sunday", value: "Closed" },
+    { label: "Mon – Fri", value: "9 AM – 8 PM" },
+    { label: "Sat – Sun", value: "10 AM – 6 PM" },
   ],
 } as const;
 

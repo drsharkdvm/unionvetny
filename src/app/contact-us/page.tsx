@@ -9,7 +9,7 @@ import { SITE, ACTIONS } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Union Vet in Oakland Gardens, Queens — call (718) 301-4030, email info@unionvetny.com, or send a message. Open Mon–Fri 8–8, Sat 8–4.",
+    "Contact Union Vet in Oakland Gardens, Queens — call (718) 301-4030, email info@unionvetny.com, or send a message. Open Mon–Fri 9–8, Sat–Sun 10–6.",
   alternates: { canonical: "/contact-us" },
   openGraph: { title: "Contact Us · Union Vet", url: "/contact-us" },
   twitter: { title: "Contact Us · Union Vet" },

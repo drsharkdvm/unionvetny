@@ -58,14 +58,14 @@ export function StructuredData() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
+        opens: "09:00",
         closes: "20:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "16:00",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "18:00",
       },
     ],
   };

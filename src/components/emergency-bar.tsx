@@ -32,7 +32,7 @@ export function EmergencyBar() {
           </a>
           <span className="inline-flex items-center gap-1.5">
             <Icon name="Clock" className="size-3.5 text-blue-100" />
-            Mon–Fri 8–8 · Sat 8–4
+            Mon–Fri 9–8 · Sat–Sun 10–6
           </span>
         </div>
       </div>

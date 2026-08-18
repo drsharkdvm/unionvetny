@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
     whatToExpect:
       "When you arrive, our team triages your pet right away — the most urgent cases are seen first. We examine your pet, run any in-house tests or imaging that's needed, and talk you through the findings and options before we act. Because minutes matter in an emergency, calling ahead lets us prepare for your arrival.",
     faqs: [
-      { q: "Are you a 24-hour emergency hospital?", a: "No — Union Vet offers same-day urgent and emergency care during our open hours (Mon–Fri 8 AM–8 PM, Sat 8 AM–4 PM). For emergencies outside those hours, call (718) 301-4030 for guidance or go to the nearest 24-hour emergency animal hospital." },
+      { q: "Are you a 24-hour emergency hospital?", a: "No — Union Vet offers same-day urgent and emergency care during our open hours (Mon–Fri 9 AM–8 PM, Sat & Sun 10 AM–6 PM). For emergencies outside those hours, call (718) 301-4030 for guidance or go to the nearest 24-hour emergency animal hospital." },
       { q: "Should I call before coming in for an emergency?", a: "Yes, if you can. A quick call to (718) 301-4030 lets our team advise you and prepare for your arrival, so treatment can start the moment you're through the door." },
     ],
   },
@@ -514,7 +514,7 @@ export const FAQS: Faq[] = [
   {
     question: "What are your hours?",
     answer:
-      "We're open Monday through Friday from 8 AM to 8 PM and Saturday from 8 AM to 4 PM, and we're closed on Sundays. Staying open until 8 PM on weekdays means we're here after most work and school schedules, so you don't have to take time off for a routine visit or wait until the next day for an urgent concern. Same-day and urgent appointments are handled during these posted hours; for a true emergency outside of them, call (718) 301-4030 for guidance or contact the nearest 24-hour emergency animal hospital. We proudly serve Oakland Gardens, Bayside, Fresh Meadows, Queens Village and the wider Queens area.",
+      "We're open Monday through Friday from 9 AM to 8 PM, and Saturday and Sunday from 10 AM to 6 PM. Staying open until 8 PM on weekdays means we're here after most work and school schedules, so you don't have to take time off for a routine visit or wait until the next day for an urgent concern. Same-day and urgent appointments are handled during these posted hours; for a true emergency outside of them, call (718) 301-4030 for guidance or contact the nearest 24-hour emergency animal hospital. We proudly serve Oakland Gardens, Bayside, Fresh Meadows, Queens Village and the wider Queens area.",
   },
   {
     question: "How do I book an appointment?",
@@ -554,6 +554,6 @@ export const FAQS: Faq[] = [
   {
     question: "Where are you located and is there parking?",
     answer:
-      "We're located at 222-10 Union Turnpike in Oakland Gardens, NY 11364, easy to reach from Bayside, Fresh Meadows, Queens Village and the wider Queens area. You'll find us convenient whether you're arriving by car or public transit, and our modern hospital is set up to keep wait times short. We're open Monday–Friday 8 AM–8 PM and Saturday 8 AM–4 PM. If you'd like directions or have any trouble finding us, call (718) 301-4030 and we'll be glad to help.",
+      "We're located at 222-10 Union Turnpike in Oakland Gardens, NY 11364, easy to reach from Bayside, Fresh Meadows, Queens Village and the wider Queens area. You'll find us convenient whether you're arriving by car or public transit, and our modern hospital is set up to keep wait times short. We're open Monday–Friday 9 AM–8 PM, and Saturday and Sunday 10 AM–6 PM. If you'd like directions or have any trouble finding us, call (718) 301-4030 and we'll be glad to help.",
   },
 ];

@@ -79,6 +79,12 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  experimental: {
+    // Inline the (small) CSS into the HTML <head> instead of a separate
+    // render-blocking <link rel="stylesheet">, so first paint / LCP isn't
+    // gated on an extra stylesheet round-trip on slow mobile connections.
+    inlineCss: true,
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { DeferredGA } from "@/components/deferred-ga";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { EmergencyBar } from "@/components/emergency-bar";
@@ -99,7 +99,7 @@ export default function RootLayout({
       {/* Google Analytics 4 — loaded only in production so local dev traffic
           isn't recorded in the clinic's analytics property. */}
       {process.env.NODE_ENV === "production" && GA_MEASUREMENT_ID && (
-        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+        <DeferredGA gaId={GA_MEASUREMENT_ID} />
       )}
     </html>
   );

@@ -38,6 +38,7 @@ const connectSrc = [
   "https://www.google.com",
   "https://pagead2.googlesyndication.com",
   "https://td.doubleclick.net",
+  "https://ad.doubleclick.net",
 ]
   .filter(Boolean)
   .join(" ");

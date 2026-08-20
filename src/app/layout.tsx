@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
+import Script from "next/script";
 import { DeferredGA } from "@/components/deferred-ga";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -9,6 +10,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
 import { StructuredData } from "@/components/structured-data";
 import { SITE, GA_MEASUREMENT_ID } from "@/lib/site";
+
+// Google Tag Manager container ID
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-TW66J9K4";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,7 +88,29 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${archivo.variable} h-full`}>
+      <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `}
+        </Script>
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <StructuredData />
         <EmergencyBar />
         <SiteHeader />

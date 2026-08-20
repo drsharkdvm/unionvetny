@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 // Content-Security-Policy allowlisting exactly the third parties this site uses:
-// Google Analytics/gtag, the localmarketingmanager.com GBP widgets, Google Fonts,
-// and the Google Maps embed. 'unsafe-inline' is kept for scripts/styles because the
-// pages are statically prerendered (nonce-based CSP would force dynamic rendering);
+// Google Tag Manager, Google Analytics/gtag, Google Ads conversion tracking,
+// the localmarketingmanager.com GBP widgets, Google Fonts, and the Google Maps embed.
+// 'unsafe-inline' is kept for scripts/styles because the pages are statically
+// prerendered (nonce-based CSP would force dynamic rendering);
 // the policy still adds frame-ancestors, object-src and source allowlisting.
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -14,7 +15,12 @@ const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = [
   "script-src 'self' 'unsafe-inline'",
   isDev && "'unsafe-eval'",
-  "https://www.googletagmanager.com https://www.google-analytics.com",
+  "https://www.googletagmanager.com",
+  "https://www.google-analytics.com",
+  "https://www.googleadservices.com",
+  "https://www.google.com",
+  "https://pagead2.googlesyndication.com",
+  "https://googleads.g.doubleclick.net",
 ]
   .filter(Boolean)
   .join(" ");
@@ -22,7 +28,16 @@ const scriptSrc = [
 const connectSrc = [
   "connect-src 'self'",
   isDev && "ws: wss:",
-  "https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net",
+  "https://www.google-analytics.com",
+  "https://region1.google-analytics.com",
+  "https://www.googletagmanager.com",
+  "https://analytics.google.com",
+  "https://stats.g.doubleclick.net",
+  "https://www.googleadservices.com",
+  "https://googleads.g.doubleclick.net",
+  "https://www.google.com",
+  "https://pagead2.googlesyndication.com",
+  "https://td.doubleclick.net",
 ]
   .filter(Boolean)
   .join(" ");
@@ -33,7 +48,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: https:",
-  "frame-src 'self' https://www.localmarketingmanager.com https://www.google.com https://maps.google.com",
+  "frame-src 'self' https://www.localmarketingmanager.com https://www.google.com https://maps.google.com https://www.googletagmanager.com",
   connectSrc,
   "object-src 'none'",
   "base-uri 'self'",

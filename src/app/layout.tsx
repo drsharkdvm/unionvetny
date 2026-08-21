@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
 import Script from "next/script";
-import { DeferredGA } from "@/components/deferred-ga";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { EmergencyBar } from "@/components/emergency-bar";
@@ -9,7 +8,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
 import { StructuredData } from "@/components/structured-data";
-import { SITE, GA_MEASUREMENT_ID } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 // Google Tag Manager container ID
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-TW66J9K4";
@@ -122,11 +121,6 @@ export default function RootLayout({
         {/* Vercel Web Analytics (privacy-friendly; active on Vercel deployments) */}
         <Analytics />
       </body>
-      {/* Google Analytics 4 — loaded only in production so local dev traffic
-          isn't recorded in the clinic's analytics property. */}
-      {process.env.NODE_ENV === "production" && GA_MEASUREMENT_ID && (
-        <DeferredGA gaId={GA_MEASUREMENT_ID} />
-      )}
     </html>
   );
 }

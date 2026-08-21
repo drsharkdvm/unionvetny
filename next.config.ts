@@ -113,6 +113,8 @@ const nextConfig: NextConfig = {
       { source: "/terms-and-conditions", destination: "/terms", permanent: true },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       { source: "/appointments", destination: "/contact-us", permanent: true },
+      // SEO: consolidate the emergency keyword landing path into the canonical page
+      { source: "/emergency-vet-near-me-open", destination: "/emergency-vet", permanent: true },
       // Blog articles migrated from root-level URLs into /blog/[slug]
       ...MIGRATED_ARTICLES.map((slug) => ({
         source: `/${slug}`,

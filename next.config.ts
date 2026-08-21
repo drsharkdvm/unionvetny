@@ -15,12 +15,12 @@ const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = [
   "script-src 'self' 'unsafe-inline'",
   isDev && "'unsafe-eval'",
-  "https://www.googletagmanager.com",
+  "https://*.googletagmanager.com",
   "https://www.google-analytics.com",
   "https://www.googleadservices.com",
   "https://www.google.com",
   "https://pagead2.googlesyndication.com",
-  "https://googleads.g.doubleclick.net",
+  "https://*.g.doubleclick.net",
 ]
   .filter(Boolean)
   .join(" ");
@@ -28,17 +28,15 @@ const scriptSrc = [
 const connectSrc = [
   "connect-src 'self'",
   isDev && "ws: wss:",
-  "https://www.google-analytics.com",
-  "https://region1.google-analytics.com",
-  "https://www.googletagmanager.com",
-  "https://analytics.google.com",
-  "https://stats.g.doubleclick.net",
+  // Wildcards cover every regional GA4 collector (region1/region2/…),
+  // server-side GTM subdomains, and all DoubleClick/Ads measurement hosts.
+  "https://*.google-analytics.com",
+  "https://*.analytics.google.com",
+  "https://*.googletagmanager.com",
+  "https://*.doubleclick.net",
+  "https://*.google.com",
   "https://www.googleadservices.com",
-  "https://googleads.g.doubleclick.net",
-  "https://www.google.com",
   "https://pagead2.googlesyndication.com",
-  "https://td.doubleclick.net",
-  "https://ad.doubleclick.net",
 ]
   .filter(Boolean)
   .join(" ");
@@ -49,7 +47,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: https:",
-  "frame-src 'self' https://www.localmarketingmanager.com https://www.google.com https://maps.google.com https://www.googletagmanager.com",
+  "frame-src 'self' https://www.localmarketingmanager.com https://www.google.com https://maps.google.com https://*.googletagmanager.com https://*.doubleclick.net",
   connectSrc,
   "object-src 'none'",
   "base-uri 'self'",
